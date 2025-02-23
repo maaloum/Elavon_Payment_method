@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_elavon_api_form" model="ir.ui.view">
+        <field name="name">elavon.api.form</field>
+        <field name="model">elavon.api</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="base_url"/>
+                        <field name="client_id"/>
+                        <field name="client_secret"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_elavon_api" model="ir.actions.act_window">
+        <field name="name">Elavon API</field>
+        <field name="res_model">elavon.api</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

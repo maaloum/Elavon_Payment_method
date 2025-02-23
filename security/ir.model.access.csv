@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_accounting_conf,access_accounting_conf,model_accounting_conf,,1,1,1,1
+access_authentication_conf,access_authentication_conf,model_authentication_conf,,1,1,1,1
+access_ingenico.device,access_ingenico.device,model_ingenico_device,,1,1,1,1

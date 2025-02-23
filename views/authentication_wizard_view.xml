@@ -1,0 +1,20 @@
+<odoo>
+    <record id="view_authentication_wizard_form" model="ir.ui.view">
+        <field name="name">authentication.wizard.form</field>
+        <field name="model">authentication.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Setup Authentication">
+                <sheet>
+                    <group>
+                        <field name="username"/>
+                        <field name="password" password="True"/>
+                    </group>
+                    <footer>
+                        <button name="save_authentication" type="object" string="Save" class="oe_highlight"/>
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

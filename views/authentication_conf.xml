@@ -1,0 +1,44 @@
+<odoo>
+    <!-- Form View for Authentication -->
+    <record id="view_authentication_form" model="ir.ui.view">
+        <field name="name">authentication.conf.form</field>
+        <field name="model">authentication.conf</field>
+        <field name="arch" type="xml">
+            <form string="Authentication">
+                <sheet>
+                    <group>
+                        <field name="username"/>
+                        <field name="password" password="True"/>
+                        <field name="token" readonly="1"/>
+                    </group>
+                    <footer>
+                        <button name="authenticate_user" type="object" string="Login" class="oe_highlight"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- List View for Authentication -->
+  <record id="view_authentication_list" model="ir.ui.view">
+    <field name="name">authentication.conf.list</field>
+    <field name="model">authentication.conf</field>
+    <field name="arch" type="xml">
+        <list string="Authentication Records">
+            <field name="username"/>
+            <field name="token"/>
+        </list>
+    </field>
+</record>
+
+    <!-- Window Action -->
+    <record id="action_authentication_conf" model="ir.actions.act_window">
+        <field name="name">Authentication</field>
+        <field name="res_model">authentication.conf</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_authentication_conf" name="Authentication" parent="base.menu_administration"
+              action="action_authentication_conf" sequence="10"/>
+</odoo>

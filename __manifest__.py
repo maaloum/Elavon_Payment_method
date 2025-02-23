@@ -1,0 +1,20 @@
+{
+    'name': 'Elavon Payment Integration',
+    'version': '1.0',
+    'summary': 'Integrates Odoo with the Elavon Payment Gateway',
+    'category': 'Accounting',
+    'author': 'CF Gallery',
+    'depends': ['base', 'account'],
+    'data': [
+        'security/ir.model.access.csv',
+        # 'views/elavon_payment_views.xml',
+        'views/accounting_conf.xml',
+        "views/authentication_conf.xml",
+        'views/authentication_wizard_view.xml',
+        'data/authentication_data.xml',
+        # 'data/ir_cron.xml',
+    ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}
